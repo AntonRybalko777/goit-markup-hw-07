@@ -429,6 +429,14 @@ body {
   border-radius: 4px;
   outline: transparent;
   margin-bottom: 16px;
+
+  transition-property: border;
+  transition-duration: var(--hover-duration);
+  transition-timing-function: var(--hover-timing);
+}
+
+.form-comment:focus {
+  border-color: var(--primary-brand);
 }
 
 .form-comment::placeholder {
@@ -524,14 +532,11 @@ body {
   background-color: var(--success);
 }
 
-.subscribe-wrapper {
-  margin-left: auto;
-}
-
 .subscribe-form {
   display: flex;
   align-items: flex-end;
   gap: 24px;
+  margin-left: auto;
 }
 
 .subscribe-label {
