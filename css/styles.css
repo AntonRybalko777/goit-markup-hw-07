@@ -39,7 +39,13 @@ body {
 }
 
 .flex .logo {
-  margin-right: 76px;
+  margin-right: 120px;
+}
+
+@media only screen and (min-width: 1158px) {
+  .flex .logo {
+    margin-right: 76px;
+  }
 }
 
 .logo-studio {
@@ -105,6 +111,12 @@ body {
 
 @media only screen and (min-width: 768px) {
   .contacts {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .contacts {
     display: flex;
     gap: 40px;
   }
@@ -113,12 +125,46 @@ body {
 .hero {
   background-color: var(--dark);
   padding: 188px 0;
-  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    url(../images/people-office-mobile.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   max-width: 1440px;
   margin: 0 auto;
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url(../images/people-office-mobile@2x.jpg);
+  }
+}
+
+@media only screen and (min-width: 429px) {
+  .hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url(../images/people-office-tablet.jpg);
+  }
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/people-office-tablet@2x.jpg);
+    }
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url(../images/people-office-desktop.jpg);
+  }
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/people-office-desktop@2x.jpg);
+    }
+  }
 }
 
 .hero-header {
@@ -201,7 +247,8 @@ body {
   background-color: var(--white-background);
   letter-spacing: 0.02em;
 
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
 }
 
@@ -322,7 +369,8 @@ body {
   width: 408px;
   min-height: 576px;
   background-color: var(--dairy);
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
 
@@ -507,8 +555,8 @@ body {
 
 .footer-container {
   display: flex;
-  align-items: baseline;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 @media only screen and (max-width: 1157px) {
@@ -516,10 +564,6 @@ body {
     gap: 72px 24px;
     justify-content: center;
   }
-}
-
-.footer-article {
-  margin-right: 120px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -575,25 +619,14 @@ body {
 
 .subscribe-form {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-end;
+  justify-content: center;
   gap: 24px;
-  margin-left: auto;
-}
-
-.subscribe-label {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--white-background);
 }
 
 .subscribe-input {
-  width: 264px;
+  width: 398px;
   height: 40px;
   background-color: transparent;
   border: 1px solid var(--white-background);
@@ -601,6 +634,12 @@ body {
   border-radius: 4px;
   padding: 8px 16px;
   color: var(--white-background);
+}
+
+@media only screen and (min-width: 768px) {
+  .subscribe-input {
+    width: 264px;
+  }
 }
 
 .subscribe-input:focus {
@@ -676,7 +715,8 @@ body {
   color: var(--white-background);
   background-color: var(--pressed-state);
   border-color: transparent;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-section {
@@ -694,7 +734,8 @@ body {
 
 .portfolio-link:hover,
 .portfolio-link:focus {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-cards {
@@ -763,9 +804,6 @@ body {
   max-width: 428px;
   margin: 0 auto;
   padding: 0 16px;
-
-  outline: 1px solid red;
-  outline-offset: -2px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -819,7 +857,8 @@ ul {
 
 .header {
   border-bottom: 1px solid var(--accent);
-  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .features-section {
@@ -1038,7 +1077,8 @@ img {
   padding: 80px 35px 40px 40px;
   background-color: var(--white-background);
   z-index: 999;
-  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 1px 6px rgba(46, 47, 66, 0.08);
 
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
