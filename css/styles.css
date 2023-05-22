@@ -28,6 +28,26 @@ body {
   text-decoration: none;
 }
 
+.container {
+  min-width: 320px;
+  max-width: 428px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding: 0 15px;
+  }
+}
+
 .logo {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
@@ -124,7 +144,7 @@ body {
 
 .hero {
   background-color: var(--dark);
-  padding: 188px 0;
+  padding: 112px 0;
   background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
     url(../images/people-office-mobile.jpg);
   background-repeat: no-repeat;
@@ -141,7 +161,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 429px) {
+@media only screen and (min-width: 768px) {
   .hero {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url(../images/people-office-tablet.jpg);
@@ -154,8 +174,9 @@ body {
   }
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1158px) {
   .hero {
+    padding: 188px 0;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url(../images/people-office-desktop.jpg);
   }
@@ -170,15 +191,28 @@ body {
 .hero-header {
   color: var(--white-background);
   font-weight: 700;
-  font-size: 56px;
-  line-height: 60px;
-  letter-spacing: 0.02em;
+  font-size: 36px;
+  line-height: 1.1;
   line-height: 1.07;
   text-align: center;
   max-width: 496px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 48px;
+  margin-bottom: 72px;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-header {
+    font-size: 56px;
+    letter-spacing: 0.02em;
+    margin-bottom: 36px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .hero-header {
+    margin-bottom: 48px;
+  }
 }
 
 .hero-button {
@@ -556,23 +590,42 @@ body {
 .footer-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  row-gap: 72px;
+  justify-content: center;
 }
 
-@media only screen and (max-width: 1157px) {
+@media only screen and (min-width: 768px) {
   .footer-container {
-    gap: 72px 24px;
-    justify-content: center;
+    justify-content: start;
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+  .footer-container {
+    max-width: 580px;
+  }
+}
+
+.footer-article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 767px) {
   .footer-article {
-    display: flex;
-    margin-right: 0;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: block;
+    margin-right: 24px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .footer-article {
+    margin-right: 120px;
+  }
+  .footer-socials {
+    margin-right: 80px;
   }
 }
 
@@ -607,7 +660,7 @@ body {
 
 .footer-socials-list {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
   gap: 16px;
 }
@@ -797,26 +850,6 @@ body {
   transition-property: transform;
   transition-duration: var(--hover-duration);
   transition-timing-function: var(--hover-timing);
-}
-
-.container {
-  min-width: 320px;
-  max-width: 428px;
-  margin: 0 auto;
-  padding: 0 16px;
-}
-
-@media only screen and (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media only screen and (min-width: 1158px) {
-  .container {
-    max-width: 1158px;
-    padding: 0 15px;
-  }
 }
 
 .flex {
