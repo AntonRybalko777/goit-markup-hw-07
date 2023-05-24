@@ -1202,7 +1202,7 @@ img {
 }
 
 .menu-container .footer-socials-list {
-  gap: 33px;
+  column-gap: 33px;
 }
 
 .active {
